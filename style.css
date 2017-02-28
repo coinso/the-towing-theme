@@ -1,0 +1,32 @@
+/*
+Theme Name: the towing theme
+Theme URI: http://underscores.me/
+Author: Ido at coinso.com
+Author URI: http://coinso.com
+Description: new towing theme for coinso
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: the-towing-theme
+Tags:
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+the towing theme is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
+*/
+body{
+	color: #000;
+	background: #ffffff;
+}
+.navbar, .navbar.navbar-default{
+	background: #ffffff;
+	box-shadow: none;
+}
+.navbar .navbar-nav>li>a{
+	color: #000;
+}
