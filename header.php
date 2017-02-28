@@ -30,5 +30,9 @@
     get_template_part('template-parts/home-page/content', 'hp-hero');
 } else{
     get_template_part('template-parts/globals/content', 'hero');
-}?>
+}
+
+get_template_part('template-parts/globals/content','service-bar');
+?>
+
 	<div id="content" class="site-content">

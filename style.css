@@ -30,3 +30,16 @@ body{
 .navbar .navbar-nav>li>a{
 	color: #000;
 }
+#top-service-bar{
+    background: #ddd;
+}
+#top-service-bar .service{
+    text-align: center;
+    padding: 10px;
+    margin-top: 2%;
+    margin-bottom: 0;
+}
+#top-service-bar .service img{
+    width: auto;
+    height: 70px;
+}
