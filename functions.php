@@ -224,6 +224,21 @@ function themeInit()
     //acf fields and options
     include_once(get_template_directory() . '/inc/plugins/acf-repeater-editor-accordion/acf-repeater-accordion.php');
     include_once(get_template_directory() . '/inc/plugins/sliders-fields/acf-sliders.php');
+
+
 }
 
-themeInit();
+add_action('init', 'themeInit');
+// require all custom post types
+function add_all_post_types(){
+    $post_type_path = get_template_directory() .'/inc/post_types/*.php';
+    $files = glob($post_type_path);
+    foreach ($files as $file){
+        require_once ($file);
+    }
+
+    return $files;
+}
+
+
+add_action('after_setup_theme', 'add_all_post_types', 0);
