@@ -228,13 +228,14 @@ function themeInit()
 
 }
 
-add_action('init', 'themeInit');
+add_action('after_setup_theme', 'themeInit', 0);
+
 // require all custom post types
 function add_all_post_types(){
     $post_type_path = get_template_directory() .'/inc/post_types/*.php';
     $files = glob($post_type_path);
     foreach ($files as $file){
-        require_once ($file);
+        include_once($file);
     }
 
     return $files;
