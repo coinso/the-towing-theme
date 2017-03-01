@@ -99,6 +99,10 @@ section{
     margin-bottom: 20px;
     min-height: 250px;
 }
+section#optin {
+    background: #444;
+    color: #ffffff;
+}
 #site-footer{
     background-color: #228e4c;
     min-height:250px;

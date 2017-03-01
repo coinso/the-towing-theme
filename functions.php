@@ -95,11 +95,56 @@ function the_towing_theme_widgets_init() {
 		'name'          => esc_html__( 'Sidebar', 'the-towing-theme' ),
 		'id'            => 'sidebar-1',
 		'description'   => esc_html__( 'Add widgets here.', 'the-towing-theme' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h4 class="widget-title">',
+		'after_title'   => '</h4>',
 	) );
+    register_sidebar( array(
+        'name'          => esc_html__( 'Sidebar 2', 'the-towing-theme' ),
+        'id'            => 'sidebar-2',
+        'description'   => esc_html__( 'Add widgets here.', 'the-towing-theme' ),
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h4 class="widget-title">',
+        'after_title'   => '</h4>',
+    ) );
+    register_sidebar( array(
+        'name'          => esc_html__( 'Footer left', 'the-towing-theme' ),
+        'id'            => 'footer-1',
+        'description'   => esc_html__( 'Add widgets here.', 'the-towing-theme' ),
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h4 class="widget-title">',
+        'after_title'   => '</h4>',
+    ) );
+    register_sidebar( array(
+        'name'          => esc_html__( 'Footer left 2', 'the-towing-theme' ),
+        'id'            => 'footer-2',
+        'description'   => esc_html__( 'Add widgets here.', 'the-towing-theme' ),
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h4 class="widget-title">',
+        'after_title'   => '</h4>',
+    ) );
+    register_sidebar( array(
+        'name'          => esc_html__( 'Footer right', 'the-towing-theme' ),
+        'id'            => 'footer-3',
+        'description'   => esc_html__( 'Add widgets here.', 'the-towing-theme' ),
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h4 class="widget-title">',
+        'after_title'   => '</h4>',
+    ) );
+    register_sidebar( array(
+        'name'          => esc_html__( 'Footer right 2', 'the-towing-theme' ),
+        'id'            => 'footer-4',
+        'description'   => esc_html__( 'Add widgets here.', 'the-towing-theme' ),
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h4 class="widget-title">',
+        'after_title'   => '</h4>',
+    ) );
 }
 add_action( 'widgets_init', 'the_towing_theme_widgets_init' );
 
@@ -243,3 +288,21 @@ function add_all_post_types(){
 
 
 add_action('after_setup_theme', 'add_all_post_types', 0);
+
+function wpdocs_excerpt_more( $more ) {
+    return '<a href="'.get_the_permalink().'" rel="nofollow"> Read More...</a>';
+}
+add_filter( 'excerpt_more', 'wpdocs_excerpt_more' );
+
+
+
+/**
+ * Filter the except length to 20 words.
+ *
+ * @param int $length Excerpt length.
+ * @return int (Maybe) modified excerpt length.
+ */
+function wpdocs_custom_excerpt_length( $length ) {
+    return 35;
+}
+add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );

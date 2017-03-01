@@ -320,6 +320,49 @@
             "min": "",
             "max": 3,
             "return_format": "object"
+        },
+        {
+            "key": "field_58b6cce0f4447",
+            "label": "Home page services",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_58b6ccf3f4448",
+            "label": "hp services",
+            "name": "hp_services",
+            "type": "relationship",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "services"
+            ],
+            "taxonomy": [],
+            "filters": [
+                "post_type"
+            ],
+            "elements": [
+                "featured_image"
+            ],
+            "min": 4,
+            "max": 4,
+            "return_format": "object"
         }
     ],
     "location": [
@@ -355,5 +398,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1488357521
+    "modified": 1488375079
 }

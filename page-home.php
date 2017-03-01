@@ -35,7 +35,12 @@ get_template_part('template-parts/globals/content','kudus');
 		</main><!-- #main container-->
 	</section><!-- #primary -->
 
-<?php get_template_part('template-parts/home-page/content','hp-blog');?>
+<?php
+get_template_part('template-parts/home-page/content', 'hp-services');
+get_template_part('template-parts/globals/content', 'footer-optin');
+get_template_part('template-parts/home-page/content','hp-blog');
+
+?>
 
 
 <?php
