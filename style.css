@@ -99,6 +99,41 @@ section{
     margin-bottom: 20px;
     min-height: 250px;
 }
+#hp-services{
+    padding-bottom: 50px;
+}
+.service-card{
+    border:none;
+    text-align: center;
+}
+.service-card img{
+    min-height: 180px;
+}
+.service-card a h3.card-title{
+    text-decoration: none;
+    position: absolute;
+    top: 10%;
+    color: #ffffff;
+    text-transform: capitalize;
+    padding-left: 5px;
+    margin: 15%;
+}
+.service-card a:hover{
+    text-decoration: none;
+}
+.service-card a:hover h3.card-title{
+    color: #164626;
+}
+.service-card a .overlay{
+    position: absolute;
+    top:0;
+    width:90%;
+    height:100%;
+    background:rgba(22, 70, 38, 0.6);
+}
+.service-card a:hover .overlay{
+    background:rgba(165, 210, 140, 0.6);
+}
 section#optin {
     background: #444;
     color: #ffffff;

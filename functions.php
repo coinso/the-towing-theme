@@ -161,6 +161,8 @@ function the_towing_theme_scripts() {
     //mdb
     wp_enqueue_style('the-towing-theme-mdb', get_stylesheet_directory_uri() . $lib .'/bootstrap-material-design/dist/css/bootstrap-material-design.min.css', [], microtime());
     wp_enqueue_style('the-towing-theme-ripples', get_stylesheet_directory_uri() . $lib .'/bootstrap-material-design/dist/css/ripples.min.css', [], microtime());
+    //fontawesome
+    wp_enqueue_style('amf-fontawesome', get_stylesheet_directory_uri() . '/assets/fonts/font-awesome/css/font-awesome.min.css', [], microtime());
     //main style
     wp_enqueue_style( 'the-towing-theme-style', get_stylesheet_uri() );
 

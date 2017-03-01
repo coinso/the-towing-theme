@@ -1,0 +1,50 @@
+/**
+ * @license
+ * MyFonts Webfont Build ID 3263760, 2016-08-06T14:11:51-0400
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: BrothersOT-Bold by Emigre
+ * URL: http://www.myfonts.com/fonts/emigre/brothers-ot/bold/
+ * Copyright: Copyright (C) 1999, Emigre, Inc. All rights reserved. Designed by John Downer
+ * Licensed pageviews: 10,000
+ * 
+ * 
+ * License: http://www.myfonts.com/viewlicense?type=web&buildid=3263760
+ * 
+ * © 2016 MyFonts Inc
+*/
+
+
+/* @import must be at top of file, otherwise CSS will not work */
+
+@import url("//hello.myfonts.net/count/31cd10");
+@font-face {
+    font-family: 'BrothersOT-Bold';
+    src: url('webfonts/31CD10_0_0.eot');
+    src: url('webfonts/31CD10_0_0.eot?#iefix') format('embedded-opentype'), url('webfonts/31CD10_0_0.woff2') format('woff2'), url('webfonts/31CD10_0_0.woff') format('woff'), url('webfonts/31CD10_0_0.ttf') format('truetype');
+}
+
+/*Atlas Fonts*/
+@font-face{
+	font-family:'atlas-pro';
+	font-weight:700; /*(bold)*/
+	font-style: normal;
+	src: url('atlas-pro-700-aaa-web/font_files/atlas-pro-aaa-700.eot');
+	src: url('atlas-pro-700-aaa-web/font_files/atlas-pro-aaa-700.eot#iefix') format('embedded-opentype'),
+		url('atlas-pro-700-aaa-web/font_files/atlas-pro-aaa-700.woff') format('woff'),
+		url('atlas-pro-700-aaa-web/font_files/atlas-pro-aaa-700.ttf') format('truetype');
+}
+@font-face{
+	font-family:'atlas-pro';
+	font-weight:300; /*(light)*/
+	font-style: normal;
+	src: url('atlas-pro-300-aaa-web/font_files/atlas-pro-aaa-300.eot');
+	src: url('atlas-pro-300-aaa-web/font_files/atlas-pro-aaa-300.eot#iefix') format('embedded-opentype'),
+		url('atlas-pro-300-aaa-web/font_files/atlas-pro-aaa-300.woff') format('woff'),
+		url('atlas-pro-300-aaa-web/font_files/atlas-pro-aaa-300.ttf') format('truetype');
+}

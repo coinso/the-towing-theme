@@ -23,7 +23,7 @@
                     foreach ($test_p as $tp):
 
                          printf(
-                            esc_html('%1$s %2$s', 'the-towing-theme'), '<div class="kudus-cont"><i class="fa fa-quote"></i>'. get_field('testimonial_content', $tp->ID) .'<i class="fa fa-quote"></i></div>',
+                            esc_html('%1$s %2$s', 'the-towing-theme'), '<div class="kudus-cont"><i class="fa fa-quote-left"></i>'. get_field('testimonial_content', $tp->ID) .'<i class="fa fa-quote-right"></i></div>',
                             '<span class="kudus-name">~'.get_field('testimonial_name', $tp->ID) .'</span>');
 
                      endforeach;
