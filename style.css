@@ -37,7 +37,7 @@ section{
     background: #ddd;
 }
 #hp-hero{
-    background: url('assets/img/driver.jpg') no-repeat 50% 50% scroll;
+    /*background: #ffffff;*/
     background-size: cover;
     height: 450px;
     padding-top: 10%;

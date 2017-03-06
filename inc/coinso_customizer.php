@@ -408,6 +408,19 @@ function barbareshet_customize_register($wp_customize){
         'description'   => sprintf(__('Options for home page hero section', 'coinso_towing_theme')),
         'priority'  => 130
     ));
+    //Main Background Image settings
+    $wp_customize->add_setting('hero_image', array(
+        'default' => get_template_directory_uri() . '/assets/img/driver.jpg',
+        'type'  => 'theme_mod',
+        'sanitize_callback' => ''
+    ));
+
+    //Main Background Image control
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'hero_image', array(
+        'label' => __('Background Image','compass-tow-truck' ),
+        'section' => 'hero',
+        'settings' => 'hero_image'
+    )));
     //Hero settings
     $wp_customize->add_setting('hero_heading', array(
         'default' => _x('Hero Section Heading', ''),
@@ -448,6 +461,11 @@ function barbareshet_customize_register($wp_customize){
         'section' => 'banner',
         'settings' => 'banner_iamge'
     )));
+    /*
+     *
+     * Nav bar
+     */
+
 
 }
 add_action('customize_register', 'barbareshet_customize_register');
