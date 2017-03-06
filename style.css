@@ -69,6 +69,9 @@ section{
     width: auto;
     height: 70px;
 }
+#top-service-bar h4.service-bar-title{
+    text-transform: capitalize;
+}
 #top-service-bar .container{
     padding: 20px 0 10px 0;
 }
