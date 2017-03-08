@@ -8,6 +8,7 @@ if( $services ):
         <div class="row">
             <div class="col-md-8 col-md-push-2 col-sm-12 section-title-wrap">
                 <h3 class="section-title"><?php the_field('hp_services_title');?></h3>
+                <hr class="divider">
             </div>
         </div>
         <div class="row">

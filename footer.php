@@ -13,7 +13,7 @@ if(!is_front_page() ){
 
     get_template_part('template-parts/globals/content', 'footer-optin');
 }
-get_template_part('template-parts/globals/content', 'footer-widgets');
+//get_template_part('template-parts/globals/content', 'footer-widgets');
 
 ?>
 

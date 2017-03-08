@@ -26,12 +26,50 @@ body{
 section{
     padding: 20px 0;
 }
+#main p {
+    font-size: 1.2em;
+    line-height: 1.5;
+}
 .navbar, .navbar.navbar-default{
 	background: #ffffff;
 	box-shadow: none;
+    min-height: 120px;
+}
+.navbar-brand>img {
+    display: block;
+    height: 75px;
 }
 .navbar .navbar-nav>li>a{
 	color: #000;
+    font-weight: bold;
+    font-size: initial;
+    min-height: 120px;
+    padding-top: 50px;
+}
+.navbar .navbar-nav>li.current-menu-item>a,
+.navbar .navbar-nav>li.current-menu-item>a:hover{
+    background-color: #164626;
+    color: #ffffff;
+
+}
+.navbar .navbar-text{
+    position: relative;
+    top: 25px;
+    color: #333;
+    left: 150px;
+    font-size:1.5em;
+    font-weight: bold;
+}
+.navbar .navbar-nav>li>a:hover{
+    border-bottom: 5px solid #164626;
+    color: #000;
+}
+ul#menu-main {
+    min-height: 120px;
+}
+ul#menu-main > .services-menu-item{
+    background-color: #164626;
+    color: #ffffff;
 }
 #top-service-bar{
     background: #ddd;
@@ -49,6 +87,10 @@ section{
     background-size: cover;
     height: 350px;
     text-align: center;
+}
+#hp-hero,
+#hero{
+    margin-top: 120px;
 }
 #hero .container{
     position: relative;
@@ -108,18 +150,20 @@ section{
 .service-card{
     border:none;
     text-align: center;
+    box-shadow: none;
 }
 .service-card img{
-    min-height: 180px;
+    min-height: 200px;
 }
 .service-card a h3.card-title{
     text-decoration: none;
     position: absolute;
-    top: 10%;
+    top: 20%;
     color: #ffffff;
     text-transform: capitalize;
     padding-left: 5px;
-    margin: 15%;
+    left: 25%;
+    right: 25%;
 }
 .service-card a:hover{
     text-decoration: none;
@@ -137,6 +181,14 @@ section{
 .service-card a:hover .overlay{
     background:rgba(165, 210, 140, 0.6);
 }
+.section-title-wrap{
+    text-transform: capitalize;
+    text-align: center;
+    padding: 15px 0;
+}
+.section-title-wrap h3{
+    font-size:2em;
+}
 section#optin {
     background: #444;
     color: #ffffff;
@@ -146,4 +198,231 @@ section#optin {
     min-height:250px;
     color: #ffffff;
     text-align: center;
+}
+.hp-recent-blog-post .post-image{
+    min-height:150px;
+}
+.recent-post-title{
+    text-transform: capitalize;
+}
+@media screen and (max-width: 768px){
+    #hp-hero,
+    #hero{
+        height: 250px;
+    }
+    #hp-hero h1,
+    #hero h1{
+        font-size: 2.8em;
+    }
+    .navbar .navbar-text{
+        position: relative;
+        left: 0;
+    }
+    .navbar-default .container{
+        margin-left: 0;
+        margin-right: 0;
+    }
+    #top-service-bar .service{
+        padding:0;
+    }
+    .container {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 550px){
+    #hp-hero,
+    #hero{
+        height: 150px;
+    }
+    ul#menu-main{
+        background: #ffffff;
+    }
+    .navbar .navbar-nav>li>a{
+        min-height:0;
+        padding-top: 15px;
+    }
+    #top-service-bar{
+        padding:0;
+    }
+    #top-service-bar .container {
+        padding: 10px 0;
+    }
+    .navbar-toggle{
+        padding: 10px 10px;
+        margin-top: 30px;
+        margin-right: 30px;
+        border: 1px solid #164626;
+    }
+    .navbar-default .navbar-toggle .icon-bar{
+        background-color: #164626;
+    }
+
+    .service-card{
+        padding:0;
+        margin:5px 0;
+    }
+    .service-card img {
+        min-height: 150px;
+    }
+    .service-card a .overlay{
+        width:100%;
+    }
+    .service-card a h3.card-title {
+        left: 30%;
+        transform: translateX(-20%);
+        right:0;
+        padding-left: 0;
+        text-align: center;
+    }
+    .navbar .navbar-text{
+        top: 0;
+        left: 0;
+        font-size: 25px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+}
+
+/*
+blog page effects
+
+ */
+/* Common style */
+ figure {
+    position: relative;
+    float: left;
+    overflow: hidden;
+    margin: 10px 1%;
+    min-width: 320px;
+    max-width: 480px;
+    max-height: 360px;
+    width: 100%;
+    background: #3085a3;
+    text-align: center;
+    cursor: pointer;
+}
+
+ figure img {
+    position: relative;
+    display: block;
+    min-height: 100%;
+    max-width: 100%;
+    opacity: 0.8;
+}
+
+ figure figcaption {
+    padding: 2em;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.25em;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+ figure figcaption::before,
+ figure figcaption::after {
+    pointer-events: none;
+}
+
+ figure figcaption,
+ figure figcaption > a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Anchor will cover the whole item by default */
+/* For some effects it will show as a button */
+.grid figure figcaption > a {
+    z-index: 1000;
+    text-indent: 200%;
+    white-space: nowrap;
+    font-size: 0;
+    opacity: 0;
+}
+
+.grid figure h2 {
+    word-spacing: -0.15em;
+    font-weight: 300;
+}
+
+.grid figure h2 span {
+    font-weight: 800;
+}
+
+.grid figure h2,
+.grid figure p {
+    margin: 0;
+}
+
+.grid figure p {
+    letter-spacing: 1px;
+    font-size: 68.5%;
+}
+/*---------------*/
+/***** Lily *****/
+/*---------------*/
+
+figure.effect-lily img {
+    max-width: none;
+    width: -webkit-calc(100% + 50px);
+    width: calc(100% + 50px);
+    opacity: 0.7;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: translate3d(-40px,0, 0);
+    transform: translate3d(-40px,0,0);
+}
+
+figure.effect-lily figcaption {
+    text-align: left;
+}
+
+figure.effect-lily figcaption > div {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 2em;
+    width: 100%;
+    height: 50%;
+}
+
+figure.effect-lily h2,
+figure.effect-lily p {
+    -webkit-transform: translate3d(0,40px,0);
+    transform: translate3d(0,40px,0);
+}
+
+figure.effect-lily h2 {
+    -webkit-transition: -webkit-transform 0.35s;
+    transition: transform 0.35s;
+}
+
+figure.effect-lily p {
+    color: rgba(255,255,255,0.8);
+    opacity: 0;
+    -webkit-transition: opacity 0.2s, -webkit-transform 0.35s;
+    transition: opacity 0.2s, transform 0.35s;
+}
+
+figure.effect-lily:hover img,
+figure.effect-lily:hover p {
+    opacity: 1;
+}
+
+figure.effect-lily:hover img,
+figure.effect-lily:hover h2,
+figure.effect-lily:hover p {
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+
+figure.effect-lily:hover p {
+    -webkit-transition-delay: 0.05s;
+    transition-delay: 0.05s;
+    -webkit-transition-duration: 0.35s;
+    transition-duration: 0.35s;
 }

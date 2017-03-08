@@ -338,6 +338,27 @@
             "endpoint": 0
         },
         {
+            "key": "field_58bfc5f486f80",
+            "label": "hp services title",
+            "name": "hp_services_title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
             "key": "field_58b6ccf3f4448",
             "label": "hp services",
             "name": "hp_services",
@@ -398,5 +419,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1488375079
+    "modified": 1488963088
 }

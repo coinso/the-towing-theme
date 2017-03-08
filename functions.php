@@ -41,6 +41,11 @@ function the_towing_theme_setup() {
 	 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 	 */
 	add_theme_support( 'post-thumbnails' );
+	add_image_size('recennt', 230, 150, false);
+    add_image_size('blog-post-thumbnail', 800, 800, false);
+//    add_image_size('post-thumbnail');
+    add_image_size('page-hero', 1920, 900, false);
+
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
@@ -310,3 +315,6 @@ function wpdocs_custom_excerpt_length( $length ) {
     return 35;
 }
 add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
+
+
+

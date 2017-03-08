@@ -36,22 +36,18 @@
                 <a href="<?php the_permalink();?>">
                     <?php if ( has_post_thumbnail() ) ://check for feature image?>
                         <div class="post-image">
-                            <?php the_post_thumbnail();?>
+                            <?php the_post_thumbnail('recennt');?>
                         </div><!--end post-image-->
                     <?php endif;?>
+                </a>
                     <header class="entry-header">
                         <?php
                         if( ! is_single()):
-                        printf( esc_html__('%s', 'the-towing-theme'), '<h4 class="recent-post-title">'. the_title(). '</h4>' );
+                            printf( esc_html__('%s', 'the-towing-theme'), the_title('<h4 class="recent-post-title">', '</h4>') );
                         endif;
-                        if ( 'post' === get_post_type() ) : ?>
-                        <div class="entry-meta">
-                            <?php the_towing_theme_posted_on(); ?>
-                        </div><!-- .entry-meta -->
-                        <?php
-                        endif;?>
+                        ?>
                     </header>
-                </a>
+
                     <div class="entry-content">
                         <?php
                         the_excerpt();
