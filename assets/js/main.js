@@ -44,5 +44,14 @@
     $(".navbar-toggle").on("click", function () {
         $(this).toggleClass("is-active");
     });
+
+    //slick slider
+    $('.kudus-slider').slick({
+        dots: true,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 1,
+        adaptiveHeight: true
+    });
 })(jQuery);
 

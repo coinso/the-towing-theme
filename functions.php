@@ -163,9 +163,13 @@ function the_towing_theme_scripts() {
     //bootstrap
     wp_enqueue_style('the-towing-theme-bs', get_stylesheet_directory_uri() . $lib .'/bootstrap/dist/css/bootstrap.min.css', [], microtime());
     wp_enqueue_style('the-towing-theme-bs-theme', get_stylesheet_directory_uri() . $lib .'/bootstrap/dist/css/bootstrap-theme.min.css', [], microtime());
-    //mdb
-    wp_enqueue_style('the-towing-theme-mdb', get_stylesheet_directory_uri() . $lib .'/bootstrap-material-design/dist/css/bootstrap-material-design.min.css', [], microtime());
-    wp_enqueue_style('the-towing-theme-ripples', get_stylesheet_directory_uri() . $lib .'/bootstrap-material-design/dist/css/ripples.min.css', [], microtime());
+//    //mdb
+//    wp_enqueue_style('the-towing-theme-mdb', get_stylesheet_directory_uri() . $lib .'/bootstrap-material-design/dist/css/bootstrap-material-design.min.css', [], microtime());
+//    wp_enqueue_style('the-towing-theme-ripples', get_stylesheet_directory_uri() . $lib .'/bootstrap-material-design/dist/css/ripples.min.css', [], microtime());
+    //slick slider
+    wp_enqueue_style('the-towing-theme-slick', get_stylesheet_directory_uri() . '/assets/lib/slick/css/slick.css', [], microtime());
+    wp_enqueue_style('the-towing-theme-slick-theme', get_stylesheet_directory_uri() . '/assets/lib/slick/css/slick-theme.css', [], microtime());
+
     //fontawesome
     wp_enqueue_style('amf-fontawesome', get_stylesheet_directory_uri() . '/assets/fonts/font-awesome/css/font-awesome.min.css', [], microtime());
     //Hamburgers Menu
@@ -176,8 +180,11 @@ function the_towing_theme_scripts() {
     //scripts
     //bootstrap
     wp_enqueue_script( 'the-towing-theme-bs-script', get_template_directory_uri() . $lib . '/bootstrap/dist/js/bootstrap.min.js', array('jquery'), microtime(), true );
-    //mdb
-    wp_enqueue_script( 'the-towing-theme-md-script', get_template_directory_uri() . $lib . '/bootstrap-material-design/dist/js/material.min.js', array('jquery'), microtime(), true );
+//    //mdb
+//    wp_enqueue_script( 'the-towing-theme-md-script', get_template_directory_uri() . $lib . '/bootstrap-material-design/dist/js/material.min.js', array('jquery'), microtime(), true );
+    //slick slider
+    wp_enqueue_script( 'the-towing-theme-slick-script', get_template_directory_uri() . '/assets/lib/slick/js/slick.min.js', array('jquery'), microtime(), true );
+
     //main js file
     wp_enqueue_script( 'the-towing-theme-main-script', get_template_directory_uri() . '/assets/js/main.js', array('jquery'), microtime(), true );
 

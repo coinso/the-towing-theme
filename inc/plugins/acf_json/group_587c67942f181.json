@@ -122,6 +122,20 @@
                 "operator": "!=",
                 "value": "9"
             }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "!=",
+                "value": "testimonials"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "!=",
+                "value": "videos"
+            }
         ]
     ],
     "menu_order": 2,
@@ -132,5 +146,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1489054127
+    "modified": 1489068305
 }

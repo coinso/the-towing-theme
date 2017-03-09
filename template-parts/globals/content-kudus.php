@@ -16,16 +16,17 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-8 col-md-offset-2 col-sm-12">
+            <div class="col-md-8 col-md-offset-2 col-sm-12 kudus-slider">
                 <?php
                 $test_p = get_field('testimonial_section_cont');
                 if($test_p):
-                    foreach ($test_p as $tp):
+                $count = 1;
+                foreach ($test_p as $tp):
 
                          printf(
                             esc_html('%1$s %2$s', 'the-towing-theme'), '<div class="kudus-cont"><i class="fa fa-quote-left"></i>'. get_field('testimonial_content', $tp->ID) .'<i class="fa fa-quote-right"></i></div>',
                             '<span class="kudus-name">~'.get_field('testimonial_name', $tp->ID) .'</span>');
-
+                $count++;
                      endforeach;
 
                 endif;
