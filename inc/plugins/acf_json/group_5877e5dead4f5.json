@@ -243,9 +243,9 @@
         },
         {
             "key": "field_5878cc6585447",
-            "label": "hp optin form",
-            "name": "hp_optin_form",
-            "type": "wysiwyg",
+            "label": "hp optin logo",
+            "name": "hp_optin_logo",
+            "type": "image",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -254,10 +254,16 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "tabs": "all",
-            "toolbar": "full",
-            "media_upload": 1
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
         },
         {
             "key": "field_587c591144c9b",
@@ -419,5 +425,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1488963088
+    "modified": 1489066097
 }

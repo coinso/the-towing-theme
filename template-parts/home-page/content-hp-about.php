@@ -15,17 +15,21 @@
                 <div class="row inner-row">
                     <div class="col-sm-12 hp-section-title-wrap">
                         <h3 class="section-title">
-                            section title
+                            <?php the_field('hp_optin_title');?>
                         </h3>
+                        <hr>
                     </div>
                 </div>
                 <div class="row inner-row">
-                    <div class="col-md-6 col am-12 vid-about">
-
+                    <div class="col-md-5 col am-12 vid-about">
+                        <?php $about_logo = get_field('hp_optin_logo');?>
+                        <img src="<?php echo $about_logo['url'] ;?>" alt="<?php echo $about_logo['alt'] ;?>">
                     </div>
-                    <div class="col-md-6 col am-12 text-about">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                        At autem blanditiis, cupiditate ea eveniet expedita explicabo iste itaque maxime minus molestiae molestias mollitia neque pariatur perferendis quae quasi quia reprehenderit sint sit temporibus velit, voluptatum.
+                    <div class="col-md-7 col am-12 text-about">
+                        <?php the_field('hp_optin_text');?>
+                        <a href="<?php the_field('hp_optin_link');?>" class="btn btn-optin">
+                            <?php the_field('hp_optin_btn_text');?>
+                        </a>
                     </div>
                 </div>
             </div>
