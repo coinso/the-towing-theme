@@ -1,5 +1,8 @@
 <?php
-function barbareshet_customize_register($wp_customize){
+function coiso_customize_register($wp_customize){
+
+
+
    
     ///***********Footer area ************/
 
@@ -38,6 +41,19 @@ function barbareshet_customize_register($wp_customize){
         'label' => __('Logo','coinso_towing_theme' ),
         'section' => 'Schema',
         'settings' => 'schema_logo'
+    )));
+    //Mobile Logo settings
+    $wp_customize->add_setting('mobile_logo', array(
+        'default' => get_template_directory_uri() . '/assets/img/logo.png',
+        'type'  => 'theme_mod',
+        'sanitize_callback' => ''
+    ));
+
+    //Mobile Logo control
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'mobile_logo', array(
+        'label' => __('Mobile Logo','coinso_towing_theme' ),
+        'section' => 'Schema',
+        'settings' => 'mobile_logo'
     )));
     //Schema Type settings
     $wp_customize->add_setting('schema_type', array(
@@ -468,4 +484,4 @@ function barbareshet_customize_register($wp_customize){
 
 
 }
-add_action('customize_register', 'barbareshet_customize_register');
+add_action('customize_register', 'coiso_customize_register');

@@ -33,13 +33,15 @@
                 ?>
 
             <div class="col-md-4 col-sm-12 hp-recent-blog-post">
-                <a href="<?php the_permalink();?>">
-                    <?php if ( has_post_thumbnail() ) ://check for feature image?>
-                        <div class="post-image">
-                            <?php the_post_thumbnail('recennt');?>
-                        </div><!--end post-image-->
-                    <?php endif;?>
-                </a>
+                <div class="thumbnail">
+
+                    <a href="<?php the_permalink();?>">
+                        <?php if ( has_post_thumbnail() ) ://check for feature image?>
+                            <div class="post-image">
+                                <?php the_post_thumbnail('recennt');?>
+                            </div><!--end post-image-->
+                        <?php endif;?>
+                    </a>
                     <header class="entry-header">
                         <?php
                         if( ! is_single()):
@@ -53,6 +55,7 @@
                         the_excerpt();
                         ?>
                     </div><!-- .entry-content -->
+                </div>
 
 
             </div>

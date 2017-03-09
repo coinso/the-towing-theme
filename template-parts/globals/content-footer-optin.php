@@ -18,8 +18,8 @@
                     <?php the_field('optin_desc');?>
                 </div>
                 <div class="optin-btn-wrap">
-                    <a href="<?php the_field('optin_btn_link');?>" class="btn optin-btn btn-success btn-lg">
-                        <?php the_field('optin_btn_text');?>
+                    <a href="<?php the_field('optin_btn_text');?>" class="btn optin-btn btn-success btn-lg">
+                        <i class="fa fa-phone"></i><?php the_field('optin_btn_link');?>
                     </a>
                 </div>
             </div>

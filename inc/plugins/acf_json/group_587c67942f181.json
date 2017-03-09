@@ -78,7 +78,7 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
+            "default_value": "(123) 456789-0",
             "placeholder": "",
             "prepend": "",
             "append": "",
@@ -132,5 +132,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1489048317
+    "modified": 1489054127
 }

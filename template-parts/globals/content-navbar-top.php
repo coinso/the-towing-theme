@@ -17,7 +17,11 @@
   </span>
             </button>
             <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>">
+                <?php if(wp_is_mobile()):?>
+                    <img src="<?php echo get_theme_mod('mobile_logo', get_template_directory_uri() . '/assets/img/logo.png') ;?>" alt="<?php bloginfo( 'name' ); ?>" id="logo"/>
+                <?php else:?>
                 <img src="<?php echo get_theme_mod('schema_logo', get_template_directory_uri() . '/assets/img/logo.png') ;?>" alt="<?php bloginfo( 'name' ); ?>" id="logo"/>
+                <?php endif;?>
             </a>
             <?php if(wp_is_mobile()):?>
                 <a href="tel:<?php echo get_theme_mod('schema_phone_number') ;?>" class="navbar-text">

@@ -14,7 +14,7 @@ if(is_singular('services')){
 }
 ?>
 
-<?php if (has_post_thumbnail( )) :?>
+<?php if (has_post_thumbnail( ) && ! is_home()) :?>
 <section class="hero" id="hero" style="background: url('<?php the_post_thumbnail_url('page-hero') ?>') no-repeat 50% 75% scroll">
     <div class="container">
         <div class="row">
