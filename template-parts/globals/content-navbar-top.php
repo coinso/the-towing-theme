@@ -10,20 +10,27 @@
 <nav class="navbar navbar-default navbar-static-top">
     <div class="container">
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <button type="button" class="navbar-toggle hamburger hamburger--spring" data-toggle="collapse" data-target=".navbar-collapse">
                 <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
+                <span class="hamburger-box">
+    <span class="hamburger-inner"></span>
+  </span>
             </button>
             <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>">
                 <img src="<?php echo get_theme_mod('schema_logo', get_template_directory_uri() . '/assets/img/logo.png') ;?>" alt="<?php bloginfo( 'name' ); ?>" id="logo"/>
             </a>
+            <?php if(wp_is_mobile()):?>
+                <a href="tel:<?php echo get_theme_mod('schema_phone_number') ;?>" class="navbar-text">
+                    <p><i class="fa fa-phone fa-x2"></i><?php echo get_theme_mod('schema_phone_number') ;?></p>
+                </a>
+            <?php endif;?>
         </div>
         <div class="collapse navbar-collapse">
-            <a href="tel:<?php echo get_theme_mod('schema_phone_number') ;?>">
-                <p class="navbar-text"><i class="fa fa-phone fa-x2"></i><?php echo get_theme_mod('schema_phone_number') ;?></p>
+            <?php if(!wp_is_mobile()):?>
+            <a href="tel:<?php echo get_theme_mod('schema_phone_number') ;?>" class="navbar-text">
+                <p><i class="fa fa-phone fa-x2"></i><?php echo get_theme_mod('schema_phone_number') ;?></p>
             </a>
+            <?php endif;?>
             <?php
             wp_nav_menu( array(
                     'menu' => 'main-menu',

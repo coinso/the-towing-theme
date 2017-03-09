@@ -159,7 +159,7 @@ add_action( 'widgets_init', 'the_towing_theme_widgets_init' );
 function the_towing_theme_scripts() {
     $lib = '/assets/lib/node_modules/';
     //normalize
-    wp_enqueue_style('the-towing-theme-ripples', get_stylesheet_directory_uri() . '/assets/css/normalize.css', [], microtime());
+    wp_enqueue_style('the-towing-theme-normalize', get_stylesheet_directory_uri() . '/assets/css/normalize.css', [], microtime());
     //bootstrap
     wp_enqueue_style('the-towing-theme-bs', get_stylesheet_directory_uri() . $lib .'/bootstrap/dist/css/bootstrap.min.css', [], microtime());
     wp_enqueue_style('the-towing-theme-bs-theme', get_stylesheet_directory_uri() . $lib .'/bootstrap/dist/css/bootstrap-theme.min.css', [], microtime());
@@ -168,6 +168,8 @@ function the_towing_theme_scripts() {
     wp_enqueue_style('the-towing-theme-ripples', get_stylesheet_directory_uri() . $lib .'/bootstrap-material-design/dist/css/ripples.min.css', [], microtime());
     //fontawesome
     wp_enqueue_style('amf-fontawesome', get_stylesheet_directory_uri() . '/assets/fonts/font-awesome/css/font-awesome.min.css', [], microtime());
+    //Hamburgers Menu
+    wp_enqueue_style('the-towing-theme-hamburger', get_stylesheet_directory_uri() . '/assets/css/hamburgers.min.css', [], microtime());
     //main style
     wp_enqueue_style( 'the-towing-theme-style', get_stylesheet_uri() );
 

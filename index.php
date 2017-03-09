@@ -32,11 +32,19 @@ get_header(); ?>
 				 */
 				get_template_part( 'template-parts/content', get_post_format() );
 
-			endwhile;
+			endwhile;?>
+<div class="row pagination-wrapper">
+    <div class="col-md-8 col-md-offset-2 col-sm-12 text-center">
 
-			the_posts_navigation();
+        <?php     the_posts_pagination( array(
+            'mid_size' => 2,
+            'prev_text' => __( '<i class="fa fa-chevron-left"></i>', 'the-towing-theme' ),
+            'next_text' => __( '<i class="fa fa-chevron-right"></i>', 'the-towing-theme' ),
+        ) );?>
+        </div>
+    </div>
 
-		else :
+<?php		else :
 
 			get_template_part( 'template-parts/content', 'none' );
 
@@ -46,5 +54,5 @@ get_header(); ?>
 	</div><!-- #primary -->
 
 <?php
-get_sidebar();
+//get_sidebar();
 get_footer();

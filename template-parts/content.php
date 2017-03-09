@@ -6,21 +6,22 @@
  *
  * @package the_towing_theme
  */
-
 if( is_single()){
     $classes = 'row';
 }else{
-    $classes = 'col-md-6 col-sm-12';
+    $classes = array(
+        'col-md-3',
+        'col-sm-12'
+    );
 }
 ?>
 
+<article id="post-<?php the_ID(); ?>" <?php post_class('row'); ?>>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class($classes); ?>>
-
-    <?php
-    if ( is_single() ) :?>
     <div class="col-md-8 col-md-offset-2 col-sm-12">
 
+            <?php
+            if ( is_single() ) :?>
         <header class="entry-header">
             <?php  the_title( '<h2 class="entry-title">', '</h2>' );?>
         </header><!-- .entry-header -->
@@ -42,36 +43,50 @@ if( is_single()){
                 <footer class="entry-footer">
                     <!--            --><?php //the_towing_theme_entry_footer(); ?>
                 </footer><!-- .entry-footer -->
+            <?php else :
 
+                    if (has_post_thumbnail()):?>
+                        <?php   the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+
+                        if ( 'post' === get_post_type() ) : ?>
+                            <div class="entry-meta post-details">
+                                <i class="fa fa-user"></i> <?php the_author();  ?>
+                                <i class="fa fa-clock-0"></i>
+                                <time><?php the_date(); ?></time>
+                                <i class="fa fa-folder"></i> <?php the_category(', '); ?>
+                                <i class="fa fa-tags"></i> <?php the_tags('', ', ', ''); ?>
+                            </div><!-- .entry-meta -->
+
+                        <?php endif;?>
+                        <div class="blog-post-thumbnail">
+                            <?php the_post_thumbnail('blog-post-thumbnail');?>
+                            <div class="blog-post-excerpt">
+                               <?php the_excerpt();?>
+                            </div>
+                        </div>
+
+                    <?php else :?>
+                        <?php   the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+
+                        if ( 'post' === get_post_type() ) : ?>
+                            <div class="entry-meta post-details">
+                                <i class="fa fa-user"></i> <?php the_author();  ?>
+                                <i class="fa fa-clock-0"></i>
+                                <time><?php the_date(); ?></time>
+                                <i class="fa fa-folder"></i> <?php the_category(', '); ?>
+                                <i class="fa fa-tags"></i> <?php the_tags('', ', ', ''); ?>
+                            </div><!-- .entry-meta -->
+
+                        <?php endif;?>
+                        <div class="blog-post-thumbnail">
+
+                            <div class="blog-post-excerpt">
+                                <?php the_excerpt();?>
+                            </div>
+                        </div>
+                    <?php endif;?>
+
+            <?php endif;?>
 
     </div>
-    <?php else :
-
-        if (has_post_thumbnail()):?>
-
-                <figure class="effect-lily">
-                    <div class="blog-post-thumbnail">
-                        <?php the_post_thumbnail('blog-post-thumbnail');?>
-                        <figcaption>
-                            <div class="blog-post-excerpt">
-                                <?php   the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-
-                                if ( 'post' === get_post_type() ) : ?>
-                                    <div class="entry-meta post-details">
-                                        <i class="fa fa-user"></i> <?php the_author();  ?>
-                                        <i class="fa fa-clock-0"></i>
-                                        <time><?php the_date(); ?></time>
-                                        <i class="fa fa-folder"></i> <?php the_category(', '); ?>
-                                        <i class="fa fa-tags"></i> <?php the_tags('', ', ', ''); ?>
-                                    </div><!-- .entry-meta -->
-                                <?php endif;
-                                the_excerpt();?>
-                            </div>
-                        </figcaption>
-                    </div>
-                </figure>
-
-        <?php endif;?>
-
-    <?php endif;?>
 </article><!-- #post-## -->
