@@ -7,16 +7,7 @@
  */
 ?>
 <div class="col-md-3" id="footer-widget-1">
-<!--                    --><?php //if(is_front_page()):?>
-<!--                    <div id="schema">-->
-<!--                        --><?php //get_template_part( 'template-parts/globals/content', 'schema' );?>
-<!--                    </div>-->
-<!--                    --><?php //else:?>
-<!--                    --><?php //if(is_active_sidebar('footer-1')){
-//                        dynamic_sidebar('footer-1');
-//                    }
-//                    ?>
-<!--                    --><?php //endif;?>
+    <?php echo do_shortcode('[localbusiness]');?>
 </div>
 <div class="col-md-3" id="footer-widget-2">
     <?php if(is_active_sidebar('footer-2')){
