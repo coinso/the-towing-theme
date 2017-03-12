@@ -32,7 +32,7 @@
                         </span>
                     </div>
 
-          <?php      $count++;
+                <?php      $count++;
 
                      endforeach;
 

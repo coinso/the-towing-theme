@@ -51,7 +51,9 @@
         infinite: true,
         speed: 300,
         slidesToShow: 1,
-        adaptiveHeight: true
+        adaptiveHeight: true,
+        prevArrow: '<button type="button" class="fa fa-angle-right fa-2x"></button>',
+        nextArrow: '<button type="button" class="fa fa-angle-left fa-2x"></button>'
     });
 })(jQuery);
 
