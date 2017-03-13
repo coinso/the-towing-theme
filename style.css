@@ -406,3 +406,10 @@ div.wpcf7-validation-errors{
     border: 2px solid #93A444;
     color: #93A444;
 }
+#footer-widgets{
+    background-color: #dddddd;
+    border-top: 5px solid #333333;
+}
+#footer-disclaimer ul{
+    list-style-type: none;
+}
