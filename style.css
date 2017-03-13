@@ -348,11 +348,11 @@ a.page-numbers:hover {
     }
 }
 #optin .optin-btn-wrap a.optin-btn{
-    border: 1px solid #93A444;
+    /*border: 1px solid #93A444;*/
     width: 30%;
     padding: 15px;
     font-size: 1.8em;
-    color: #93A444;
+    color: #ffffff;
 }
 
 .kudus-slider .slick-arrow{
