@@ -91,6 +91,7 @@ ul#menu-main > .services-menu-item{
 #hp-hero,
 #hero{
     margin-top: 120px;
+    background-size: cover;
 }
 #hero .container{
     position: relative;
@@ -412,4 +413,31 @@ div.wpcf7-validation-errors{
 }
 #footer-disclaimer ul{
     list-style-type: none;
+}
+.footer-social-icons .social-cta{
+    text-transform: capitalize;
+}
+.footer-social-icons a{
+    width: 20px;
+    height: 20px;
+    padding: 10px 0;
+}
+.footer-social-icons a .fa,
+.footer-social-icons a:visited .fa,
+.footer-social-icons a:hover .fa{
+    padding: 10px;
+    border-radius: 5px;
+    color: #ffffff;
+}
+.footer-social-icons .fa-facebook{
+    background-color: #3b5998;
+}
+.footer-social-icons .fa-twitter{
+    background-color: #55acee;
+}
+.footer-social-icons .fa-google-plus{
+    background-color: #dd4b39;
+}
+.footer-social-icons .fa-yelp{
+    background-color: #D32323;
 }

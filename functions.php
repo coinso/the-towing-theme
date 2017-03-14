@@ -43,7 +43,7 @@ function the_towing_theme_setup() {
 	add_theme_support( 'post-thumbnails' );
 	add_image_size('recennt', 230, 150, false);
     add_image_size('blog-post-thumbnail', 800, 800, false);
-//    add_image_size('post-thumbnail');
+    add_image_size('service-thumbnail', 300, 300, false);
     add_image_size('page-hero', 1920, 900, false);
 
 

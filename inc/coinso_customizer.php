@@ -209,7 +209,24 @@ function coiso_customize_register($wp_customize){
         'description' => '',
         'panel' => 'Social',
     ) );
+    // Add social cta settings
 
+    $wp_customize->add_setting( 'social_cta_title', array(
+        'default' => '',
+        'type' => 'theme_mod',
+        'capability' => 'edit_theme_options',
+        'transport' => '',
+        'sanitize_callback' => 'esc_url',
+    ) );
+    // Add social cta control
+
+    $wp_customize->add_control( 'social_cta_title', array(
+        'type' => 'url',
+        'priority' => 10,
+        'section' => 'social_links',
+        'label' => __( 'Social CTA Title', 'coinso_towing_theme' ),
+        'description' => 'Put in CTA for social menu.',
+    ) );
     // Add Facebook settings
 
     $wp_customize->add_setting( 'facebook_url_field', array(

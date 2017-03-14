@@ -47,11 +47,29 @@
             </li>
             <li class="inline-block">
                 <div class="footer-social-icons">
+                    <?php $social_cta = get_theme_mod(esc_html__('social_cta_title'));
+                        if($social_cta):?>
+                    <h4 class="social-cta">
+                        follow us on:
+                    </h4>
+                    <?php endif;?>
                     <ul class="list-inline">
-                        <li><a href="<?php the_field('company_fb','options');?>" target="_blank" rel="nofollow"><i class="fa fa-facebook"></i> </a></li>
-                        <li><a href="<?php the_field('company_twitter','options');?>" target="_blank" rel="nofollow"><i class="fa fa-twitter"></i> </a></li>
-                        <li><a href="<?php the_field('company_gmb','options');?>" target="_blank" rel="nofollow"><i class="fa fa-google-plus"></i> </a></li>
-                        <li><a href="<?php the_field('company_yelp','options');?>" target="_blank" rel="nofollow"><i class="fa fa-yelp"></i> </a></li>
+                        <?php $facebook = get_theme_mod(esc_html__('facebook_url_field'));
+                                if($facebook) : ?>
+                        <li><a href="<?php echo $facebook;?>" target="_blank" rel="nofollow"><i class="fa fa-facebook"></i> </a></li>
+                            <?php endif;
+                            $twitter = get_theme_mod( esc_html__('twitter_url_field'));
+                                if($twitter) :?>
+                        <li><a href="<?php echo $twitter;?>" target="_blank" rel="nofollow"><i class="fa fa-twitter"></i> </a></li>
+                            <?php endif;
+                            $gmb = get_theme_mod(esc_html__('google_plus_url_field'));
+                                if($gmb) : ?>
+                        <li><a href="<?php echo $gmb;?>" target="_blank" rel="nofollow"><i class="fa fa-google-plus"></i> </a></li>
+                            <?php endif;
+                           $yelp = get_theme_mod(esc_html__('yelp_url_field'));
+                            if($yelp):?>
+                        <li><a href="<?php echo $yelp;?>" target="_blank" rel="nofollow"><i class="fa fa-yelp"></i> </a></li>
+                            <?php endif;?>
                     </ul>
                 </div>
             </li>

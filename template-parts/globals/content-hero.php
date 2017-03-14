@@ -15,7 +15,7 @@ if(is_singular('services')){
 ?>
 
 <?php if (has_post_thumbnail( ) && ! is_home()) :?>
-<section class="hero" id="hero" style="background: url('<?php the_post_thumbnail_url('page-hero') ?>') no-repeat 50% 75% scroll">
+<section class="hero" id="hero" style="background: url('<?php the_post_thumbnail_url('page-hero') ?>') no-repeat 50% 75% scroll; background-size: cover;">
     <div class="container">
         <div class="row">
             <h1><?php echo $page_title ? $page_title : the_title();?></h1>
