@@ -15,9 +15,14 @@
  */
 
 get_header();
+    if(get_field('show_about_section')){
 
-get_template_part('template-parts/home-page/content','hp-about');
-get_template_part('template-parts/globals/content','kudus');
+        get_template_part('template-parts/home-page/content','hp-about');
+    }
+    if( get_field('show_testimonial_section')){
+
+        get_template_part('template-parts/globals/content','kudus');
+    }
 ?>
 
 	<section id="primary" class="content-area">
@@ -36,9 +41,15 @@ get_template_part('template-parts/globals/content','kudus');
 	</section><!-- #primary -->
 
 <?php
-get_template_part('template-parts/home-page/content', 'hp-services');
+if( get_field('show_services_section')){
+
+    get_template_part('template-parts/home-page/content', 'hp-services');
+}
 get_template_part('template-parts/globals/content', 'footer-optin');
-get_template_part('template-parts/home-page/content','hp-blog');
+if( get_field('show_blog_section')){
+
+    get_template_part('template-parts/home-page/content','hp-blog');
+}
 
 ?>
 

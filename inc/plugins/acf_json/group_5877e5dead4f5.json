@@ -390,6 +390,86 @@
             "min": 4,
             "max": 4,
             "return_format": "object"
+        },
+        {
+            "key": "field_58c8dd7a11750",
+            "label": "hp sections control",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_58c8ddb811751",
+            "label": "show about section",
+            "name": "show_about_section",
+            "type": "true_false",
+            "instructions": "Un-check this button in order to hide about section",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1
+        },
+        {
+            "key": "field_58c8dfb3cc8c2",
+            "label": "show testimonial section",
+            "name": "show_testimonial_section",
+            "type": "true_false",
+            "instructions": "Un-check this button in order to hide testimonial section",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1
+        },
+        {
+            "key": "field_58c8dfd4cc8c3",
+            "label": "show services section",
+            "name": "show_services_section",
+            "type": "true_false",
+            "instructions": "Un-check this button in order to hide services section",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1
+        },
+        {
+            "key": "field_58c8dfebcc8c4",
+            "label": "show blog section",
+            "name": "show_blog_section",
+            "type": "true_false",
+            "instructions": "Un-check this button in order to hide  blog section",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1
         }
     ],
     "location": [
@@ -425,5 +505,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1489066097
+    "modified": 1489559554
 }
