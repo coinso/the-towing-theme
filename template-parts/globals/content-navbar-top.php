@@ -25,14 +25,14 @@
             </a>
             <?php if(wp_is_mobile()):?>
                 <a href="tel:<?php echo get_theme_mod('schema_phone_number') ;?>" class="navbar-text">
-                    <p><i class="fa fa-phone fa-x2"></i><?php echo get_theme_mod('schema_phone_number') ;?></p>
+                    <p><i class="fa fa-phone fa-x2"></i>&nbsp;<?php echo get_theme_mod('schema_phone_number') ;?></p>
                 </a>
             <?php endif;?>
         </div>
         <div class="collapse navbar-collapse">
             <?php if(!wp_is_mobile()):?>
             <a href="tel:<?php echo get_theme_mod('schema_phone_number') ;?>" class="navbar-text">
-                <p><i class="fa fa-phone fa-x2"></i><?php echo get_theme_mod('schema_phone_number') ;?></p>
+                <p><i class="fa fa-phone fa-x2"></i>&nbsp;<?php echo get_theme_mod('schema_phone_number') ;?></p>
             </a>
             <?php endif;?>
             <?php
