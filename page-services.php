@@ -21,10 +21,21 @@ get_header();
 
     );
     $query = new WP_Query($args);
+$page_title = get_post_meta($post->ID, 'page title', true);
 ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main container" role="main">
+            <div class="row title-wrap">
+                <div class="col-sm-12 hp-section-title-wrap">
+                    <?php if($page_title):?>
+                        <h1 class="section-title"><?php echo $page_title;?></h1>
+                    <?php else :
+                        the_title('<h1 class="section-title">','</h1>');
+                    endif;?>
+                    <hr>
+                </div>
+            </div>
             <div class="row">
                 <?php
                 while ( $query->have_posts() ) : $query->the_post();

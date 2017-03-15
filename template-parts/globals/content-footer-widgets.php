@@ -5,12 +5,14 @@
  * Date: 3/1/2017
  * Time: 12:32 PM
  */
+if( !is_page_template('page-city.php')){
 ?>
+
 <section id="footer-widgets">
     <div class="container">
         <div class="row">
             <div class="col-md-3" id="footer-widget-1">
-                <?php echo do_shortcode('[localbusiness]');?>
+                <?php echo do_shortcode('[localbusiness]'); ?>
             </div>
             <div class="col-md-3" id="footer-widget-2">
                 <?php if(is_active_sidebar('footer-2')){
@@ -33,3 +35,4 @@
         </div>
     </div>
 </section>
+<?php }

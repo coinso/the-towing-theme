@@ -6,13 +6,20 @@
  *
  * @package the_towing_theme
  */
-
+if(is_singular('services')){
+    $page_title = get_field('service_name');
+}elseif(is_home()){
+    $page_title = single_post_title('', false);
+}else{
+    $page_title = get_post_meta($post->ID,'page title', true);
+}
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class('row'); ?>>
     <div class="col-md-8 col-md-offset-2 col-sm-12 content">
         <header class="entry-header">
-            <?php the_title( '<h2 class="entry-title">', '</h2>' ); ?>
+
+            <h1 class="entry-title"><?php echo $page_title ? $page_title : get_the_title(); ?></h1>
         </header><!-- .entry-header -->
 
         <div class="entry-content">

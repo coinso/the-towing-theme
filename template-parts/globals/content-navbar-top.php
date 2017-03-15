@@ -12,9 +12,9 @@
         <div class="navbar-header">
             <button type="button" class="navbar-toggle hamburger hamburger--spring" data-toggle="collapse" data-target=".navbar-collapse">
                 <span class="sr-only">Toggle navigation</span>
-                <span class="hamburger-box">
-    <span class="hamburger-inner"></span>
-  </span>
+                    <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
             </button>
             <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>">
                 <?php if(wp_is_mobile()):?>

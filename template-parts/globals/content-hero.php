@@ -18,11 +18,11 @@ if(is_singular('services')){
 <section class="hero" id="hero" style="background: url('<?php the_post_thumbnail_url('page-hero') ?>') no-repeat 50% 75% scroll; background-size: cover;">
     <div class="container">
         <div class="row">
-            <h1><?php echo $page_title ? $page_title : the_title();?></h1>
-            <?php if(is_singular('services')){
-               printf( '%s', '<div class="lead">'. get_field('service_description'). '</div>');
-
-            }?>
+<!--            <h1>--><?php //echo $page_title ? $page_title : the_title();?><!--</h1>-->
+<!--            --><?php //if(is_singular('services')){
+//               printf( '%s', '<div class="lead">'. get_field('service_description'). '</div>');
+//
+//            }?>
         </div>
     </div>
 </section>
@@ -30,11 +30,11 @@ if(is_singular('services')){
     <section class="hero" id="hero">
         <div class="container">
             <div class="row">
-                <h1><?php echo $page_title ? $page_title : the_title();?></h1>
-                <?php if(is_singular('services')){
-                    printf( '%s', '<div class="lead">'. get_field('service_description'). '</div>');
-
-                }?>
+<!--                <h1>--><?php //echo $page_title ? $page_title : the_title();?><!--</h1>-->
+<!--                --><?php //if(is_singular('services')){
+//                    printf( '%s', '<div class="lead">'. get_field('service_description'). '</div>');
+//
+//                }?>
             </div>
         </div>
     </section>

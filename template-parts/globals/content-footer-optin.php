@@ -5,7 +5,8 @@
  * Date: 3/1/2017
  * Time: 12:31 PM
  */
-
+$cps_local_phone = get_field('$cps_local_phone');
+$optin_btn_link = get_field('optin_btn_link');
 ?>
 <section class="footer-optin" id="optin">
     <div class="container">
@@ -18,8 +19,8 @@
                     <?php the_field('optin_desc');?>
                 </div>
                 <div class="optin-btn-wrap">
-                    <a href="<?php the_field('optin_btn_text');?>" class="btn optin-btn btn-success btn-lg">
-                        <i class="fa fa-phone"></i><?php the_field('optin_btn_link');?>
+                    <a href="tel:<?php echo $cps_local_phone ? $cps_local_phone : $optin_btn_link;?>" class="btn optin-btn btn-success btn-lg">
+                        <i class="fa fa-phone"></i><?php the_field('optin_btn_text');?>
                     </a>
                 </div>
             </div>

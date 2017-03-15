@@ -61,8 +61,8 @@ section{
     font-weight: bold;
 }
 .navbar .navbar-nav>li>a:hover{
-    border-bottom: 5px solid #93A444;
-    color: #000;
+    background: #93A444;
+    color: #fff;
 }
 ul#menu-main {
     min-height: 120px;
@@ -241,113 +241,6 @@ a.page-numbers:hover {
     background: #93A444;
     color: #ffffff;
 }
-@media screen and (max-width: 768px){
-    #hp-hero,
-    #hero{
-        height: 250px;
-    }
-    #hp-hero h1,
-    #hero h1{
-        font-size: 2.8em;
-    }
-    .navbar .navbar-text{
-        position: relative;
-        left: 0;
-    }
-    .navbar-default .container{
-        margin-left: 0;
-        margin-right: 0;
-    }
-    #top-service-bar .service{
-        padding:0;
-    }
-    .container {
-        width: 100%;
-    }
-    .navbar .navbar-text{
-        position: relative;
-        top: 25px;
-        color: #333;
-        left: 150px;
-        font-size:1.5em;
-        font-weight: bold;
-    }
-}
-@media screen and (max-width: 550px){
-    #hp-hero,
-    #hero{
-        height: 150px;
-    }
-    ul#menu-main{
-        background: #ffffff;
-    }
-    .navbar .navbar-nav>li>a{
-        min-height:0;
-        padding-top: 15px;
-    }
-    #top-service-bar{
-        padding:0;
-    }
-    #top-service-bar .container {
-        padding: 10px 0;
-    }
-    .navbar-toggle{
-        padding: 10px 10px;
-        margin-top: 30px;
-        margin-right: 30px;
-        border: 1px solid #93A444;
-    }
-    .navbar-default .navbar-toggle .icon-bar{
-        background-color: #93A444;
-    }
-
-    .service-card{
-        padding:0;
-        margin:5px 0;
-    }
-    .service-card img {
-        min-height: 150px;
-    }
-    .service-card a .overlay{
-        width:100%;
-    }
-    .service-card a h3.card-title {
-        left: 30%;
-        transform: translateX(-20%);
-        right:0;
-        padding-left: 0;
-        text-align: center;
-    }
-    .navbar .navbar-text {
-        top: 80px;
-        left: -15px;
-        font-size: 25px;
-        font-weight: bold;
-        text-align: center;
-
-        margin:0 auto;
-    }
-    .navbar .navbar-text p{
-
-    }
-    .hamburger-box {
-        position: relative;
-        display: inline-block;
-        width: 30px;
-        height: 24px;
-    }
-    .home #kudus{
-        padding:0;
-    }
-
-}
-@media screen and (min-width: 769px) {
-    .hamburger-box {
-
-        display: none;
-
-    }
-}
 #optin .optin-btn-wrap a.optin-btn{
     /*border: 1px solid #93A444;*/
     width: 30%;
@@ -440,4 +333,152 @@ div.wpcf7-validation-errors{
 }
 .footer-social-icons .fa-yelp{
     background-color: #D32323;
+}
+.service .thumbnail{
+    min-height:270px;
+    text-align: center;
+    padding: 5px;
+}
+.service .thumbnail .service-img{
+    overflow: hidden;
+    min-height: 130px;
+}
+
+/*.service .thumbnail img{*/
+    /*transition: all .2s ease-in-out;*/
+/*}*/
+.service .thumbnail:hover .service-img{
+    /*transform: scale(1.08);*/
+    background-size: 120%;
+    transition:all 0.5s ;
+}
+.service .thumbnail .service-title{
+    text-transform: capitalize;
+    color: #93A444;
+}
+.service .thumbnail a:hover{
+    color: #93A444;
+    text-decoration: none;
+}
+.service .thumbnail a.btn-success{
+    background-color: #93A444;
+    border-radius: 0;
+    color: #ffffff;
+    background-image: none;
+    border-color: #93A444;
+}
+@media screen and (max-width: 768px){
+    #hp-hero,
+    #hero{
+        height: 250px;
+    }
+    #hp-hero h1,
+    #hero h1{
+        font-size: 2.8em;
+    }
+    .navbar .navbar-text{
+        position: relative;
+        left: 0;
+    }
+    .navbar-default .container{
+        margin-left: 0;
+        margin-right: 0;
+    }
+    #top-service-bar .service{
+        padding:0;
+    }
+    .container {
+        width: 100%;
+    }
+    .navbar .navbar-text{
+        position: relative;
+        top: 25px;
+        color: #333;
+        left: 150px;
+        font-size:1.5em;
+        font-weight: bold;
+    }
+}
+@media screen and (max-width: 550px){
+    #hp-hero,
+    #hero{
+        height: 150px;
+    }
+    ul#menu-main{
+        background: #ffffff;
+    }
+    .navbar .navbar-nav>li>a{
+        min-height:0;
+        padding-top: 15px;
+    }
+    #top-service-bar{
+        padding:0;
+    }
+    #top-service-bar .container {
+        padding: 10px 0;
+    }
+    .navbar-toggle{
+        padding: 10px 10px;
+        margin-top: 30px;
+        margin-right: 30px;
+        border: 1px solid #93A444;
+    }
+    .navbar-default .navbar-toggle .icon-bar{
+        background-color: #93A444;
+    }
+
+    .service-card{
+        padding:0;
+        margin:5px 0;
+    }
+    .service-card img {
+        min-height: 150px;
+    }
+    .service-card a .overlay{
+        width:100%;
+    }
+    .service-card a h3.card-title {
+        left: 30%;
+        transform: translateX(-20%);
+        right:0;
+        padding-left: 0;
+        text-align: center;
+    }
+    .navbar .navbar-text {
+        top: 80px;
+        left: 80px;
+        font-size: 25px;
+        font-weight: bold;
+        text-align: center;
+        position: absolute;
+        margin:0 auto;
+    }
+    /*.navbar .navbar-text p{*/
+        /*position: absolute;*/
+    /*}*/
+    .hamburger-box {
+        position: relative;
+        display: inline-block;
+        width: 30px;
+        height: 24px;
+    }
+    .home #kudus{
+        padding:0;
+    }
+    .vid-about{
+        text-align: center;
+    }
+    #optin .optin-btn-wrap a.optin-btn{
+        width: 100%;
+    }
+}
+@media screen and (min-width: 769px) {
+    .hamburger-box {
+
+        display: none;
+
+    }
+}
+#map-wrap h3{
+    margin-top: 0;
 }

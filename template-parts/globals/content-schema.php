@@ -28,17 +28,17 @@
                     <span itemprop="description"><?php echo get_theme_mod(__('schema_brand_description')) ? get_theme_mod(__('schema_brand_description')) : get_bloginfo('description'); ?></span>
                 </div>
             </li>
-            <li class="inline-block">
-                <div class="footer-address">
-                    <div class="description" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-                        <i class="fa fa-home">&nbsp</i>
-                        <span itemprop="streetAddress"><?php echo get_theme_mod(__('schema_street_address')) ? get_theme_mod(__('schema_street_address')) : __('Add street name'); ?></span>,<br>
-                        <span itemprop="addressLocality"><?php echo get_theme_mod(__('schema_city')) ? get_theme_mod(__('schema_city')) : __('Add city name'); ?>, </span>
-                        <span itemprop="addressRegion"><?php echo get_theme_mod(__('schema_region')) ? get_theme_mod(__('schema_region')) : __('Add region'); ?>, </span>
-                        <span itemprop="postalCode"><?php echo get_theme_mod(__('schema_zip')) ? get_theme_mod(__('schema_zip')) : __('Add zip code'); ?></span>
-                    </div>
-                </div>
-            </li>
+<!--            <li class="inline-block">-->
+<!--                <div class="footer-address">-->
+<!--                    <div class="description" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">-->
+<!--                        <i class="fa fa-home">&nbsp</i>-->
+<!--                        <span itemprop="streetAddress">--><?php //echo get_theme_mod(__('schema_street_address')) ? get_theme_mod(__('schema_street_address')) : __('Add street name'); ?><!--</span>,<br>-->
+<!--                        <span itemprop="addressLocality">--><?php //echo get_theme_mod(__('schema_city')) ? get_theme_mod(__('schema_city')) : __('Add city name'); ?><!--, </span>-->
+<!--                        <span itemprop="addressRegion">--><?php //echo get_theme_mod(__('schema_region')) ? get_theme_mod(__('schema_region')) : __('Add region'); ?><!--, </span>-->
+<!--                        <span itemprop="postalCode">--><?php //echo get_theme_mod(__('schema_zip')) ? get_theme_mod(__('schema_zip')) : __('Add zip code'); ?><!--</span>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </li>-->
             <li class="inline-block">
                 <div class="footer-phone"><i class="fa fa-phone">&nbsp</i>
                     <span itemprop="telephone"><?php echo get_theme_mod('schema_phone_number') ? get_theme_mod('schema_phone_number') : __('Add phone number');?></span>
