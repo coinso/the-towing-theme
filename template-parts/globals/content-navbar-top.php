@@ -6,6 +6,8 @@
  * Time: 9:24 AM
  */
 
+$cps_local_phone = get_field('cps_local_phone');
+
 ?>
 <nav class="navbar navbar-default navbar-static-top">
     <div class="container">
@@ -24,19 +26,20 @@
                 <?php endif;?>
             </a>
             <?php if(wp_is_mobile()):?>
-                <a href="tel:<?php echo get_theme_mod('schema_phone_number') ;?>" class="navbar-text">
-                    <p><i class="fa fa-phone fa-x2"></i>&nbsp;<?php echo get_theme_mod('schema_phone_number') ;?></p>
+                <a href="tel:<?php echo $cps_local_phone ? $cps_local_phone : get_theme_mod('schema_phone_number') ;?>" class="navbar-text">
+                    <p><i class="fa fa-phone fa-x2"></i>&nbsp;<?php  echo $cps_local_phone ? $cps_local_phone :  get_theme_mod('schema_phone_number') ;?></p>
                 </a>
             <?php endif;?>
         </div>
         <div class="collapse navbar-collapse">
             <?php if(!wp_is_mobile()):?>
-            <a href="tel:<?php echo get_theme_mod('schema_phone_number') ;?>" class="navbar-text">
-                <p><i class="fa fa-phone fa-x2"></i>&nbsp;<?php echo get_theme_mod('schema_phone_number') ;?></p>
+            <a href="tel:<?php  echo $cps_local_phone ? $cps_local_phone :   get_theme_mod('schema_phone_number') ;?>" class="navbar-text">
+                <p><i class="fa fa-phone fa-x2"></i>&nbsp;<?php  echo $cps_local_phone ? $cps_local_phone :  get_theme_mod('schema_phone_number') ;?></p>
             </a>
             <?php endif;?>
             <?php
             wp_nav_menu( array(
+                    'theme_location' => 'primary',
                     'menu' => 'main-menu',
                     'depth' => 2,
                     'container' => true,

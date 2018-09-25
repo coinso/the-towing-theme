@@ -49,9 +49,9 @@ function the_towing_theme_setup() {
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'main-menu' => esc_html__( 'Primary', 'the-towing-theme' ),
-        'secondary-menu' => esc_html__( 'Secondary', 'the-towing-theme' ),
-        'footer-menu' => esc_html__( 'Footer', 'the-towing-theme' ),
+		'primary' => esc_html__( 'Primary', 'the-towing-theme' ),
+        'secondary' => esc_html__( 'Secondary', 'the-towing-theme' ),
+        'footer' => esc_html__( 'Footer', 'the-towing-theme' ),
 	) );
 
 	/*
@@ -226,8 +226,7 @@ require get_template_directory() . '/inc/coinso_customizer.php';
 require get_template_directory() . '/inc/jetpack.php';
 
 
-function themeInit()
-{
+function themeInit(){
     /**
      * hide the admin bar
      */
