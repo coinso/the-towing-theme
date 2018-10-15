@@ -15,11 +15,12 @@ if( $services ):
             <?php foreach( $services as $service ):
                 $service_name = get_field('service_name', $service->ID) ? get_field('service_name', $service->ID) : get_the_title( $service->ID );
                 ?>
-                <div class="service-card panel panel-default col-md-3 col-sm-6 col-xs-6">
-                    <a href="<?php echo get_permalink( $service->ID ); ?>">
+            <div class="col-md-3 col-sm-6 col-xs-6 service-card-wrap">
+                <div class="service-card panel panel-default">
+                    <a href="<?php echo esc_url( get_permalink( $service->ID ) ); ?>">
+                        <div class="overlay"></div>
                         <?php $photo = get_field('service_image', $service->ID);?>
                         <img src="<?php echo $photo['url']; ?>" alt="<?php echo $photo['alt']; ?>" class="service-card__img"/>
-                        <div class="overlay"></div>
                         <h3 class="card-title">
                             <?php echo esc_html( $service_name ); ?>
                             <br>
@@ -28,6 +29,7 @@ if( $services ):
                     </a>
                     <!-- /.overlay -->
                 </div>
+            </div>
             <?php endforeach; ?>
         </div>
 
