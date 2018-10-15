@@ -170,17 +170,28 @@ ul#menu-main > .services-menu-item{
     text-decoration: none;
 }
 .service-card a:hover h3.card-title{
-    color: #93A444;
+    color: #000;
 }
 .service-card a .overlay{
     position: absolute;
     top:0;
     width:90%;
     height:100%;
-    background:rgba(22, 70, 38, 0.6);
+    background-color:rgba(22, 70, 38, 0.6);
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
 }
 .service-card a:hover .overlay{
-    background:rgba(165, 210, 140, 0.6);
+    background-color:rgba(165, 210, 140, 0.6);
+    -webkit-transition: background-color 0.5s ease-in-out;
+    -moz-transition: background-color 0.5s ease-in-out;
+    -ms-transition: background-color 0.5s ease-in-out;
+    -o-transition: background-color 0.5s ease-in-out;
+    transition: background-color 0.5s ease-in-out;
+
 }
 .section-title-wrap{
     text-transform: capitalize;
