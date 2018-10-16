@@ -17,17 +17,16 @@ if( $services ):
                 ?>
             <div class="col-md-3 col-sm-6 col-xs-6 service-card-wrap">
                 <div class="service-card panel panel-default">
-<!--                    <a href="--><?php //echo esc_url( get_permalink( $service->ID ) ); ?><!--">-->
+                    <a href="<?php echo esc_url( get_permalink( $service->ID ) ); ?>">
                         <div class="overlay"></div>
                         <?php $photo = get_field('service_image', $service->ID);?>
-                        <img src="<?php echo $photo['url']; ?>" alt="<?php echo $photo['alt']; ?>" class="service-card__img"/>
+                        <img data-src="<?php echo $photo['url']; ?>" src="" alt="<?php echo $photo['alt']; ?>" class="service-card__img"/>
                         <h3 class="card-title">
                             <?php echo esc_html( $service_name ); ?>
                             <br>
                             <i class="fa fa-caret-down service-card-read-more"></i>
                         </h3>
-<!--                    </a>-->
-                    <!-- /.overlay -->
+                    </a>
                 </div>
             </div>
             <?php endforeach; ?>

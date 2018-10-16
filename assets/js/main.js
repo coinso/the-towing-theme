@@ -104,7 +104,15 @@
         });
     }//scroll_up
     scroll_up()
-
+    function img_lazyload(){
+        var imgDefer = document.getElementsByTagName('img');
+        for ( var i=0; i < imgDefer.length; i++) {
+            if( imgDefer[i].getAttribute( 'data-src' ) ) {
+                imgDefer[i].setAttribute( 'src', imgDefer[i].getAttribute( 'data-src' ));
+            }
+        }
+    }
+    window.onload = img_lazyload();
 
     /**
      * hero_scroll_down

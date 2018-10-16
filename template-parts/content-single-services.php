@@ -7,7 +7,7 @@
  * @package the_towing_theme
  */
 
-if(is_single()):?>
+if( is_single() ){ ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class('row'); ?>>
     <div class="col-md-8 col-md-offset-2 col-sm-12">
@@ -28,20 +28,27 @@ if(is_single()):?>
         </footer><!-- .entry-footer -->
     </div>
 </article><!-- #post-## -->
-<?php else :?>
-    <?php $bg = get_the_post_thumbnail_url();?>
+<?php } else { ?>
+    <?php   $bg = get_the_post_thumbnail_url();
+            $service_name = get_field('service_name')
+    ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class('col-md-3 col-sm-6 col-xs-6 service'); ?>>
     <div class="thumbnail">
         <a class="link-to-service" href="<?php the_permalink();?>">
-            <?php if( has_post_thumbnail() ):?>
+            <?php if( has_post_thumbnail() ) {?>
                 <div class="service-img" style="background: url('<?php echo $bg;?>') no-repeat center; background-size: cover;">
-<!--                    --><?php //the_post_thumbnail('service-thumbnail');?>
                 </div>
-            <?php endif; ?>
+            <?php }; ?>
         </a>
             <header class="entry-header">
                 <?php
-                the_title('<a class="link-to-service" href="'. get_the_permalink() .'"><h3 class="service-title">','</h3></a>');
+                if ( $service_name ){ ?>
+                    <a class="link-to-service" href="<?php the_permalink();?>">
+                        <h3 class="service-title"> <?php echo $service_name;?></h3>
+                    </a>
+                <?php } else {
+                    the_title('<a class="link-to-service" href="' . get_the_permalink() . '"><h3 class="service-title">', '</h3></a>');
+                }
                 ?>
             </header><!-- .entry-header -->
 
@@ -57,4 +64,4 @@ if(is_single()):?>
 
     </div>
 </article><!-- #post-## -->
-<?php endif; ?>
+<?php } ?>

@@ -237,6 +237,7 @@ function themeInit(){
      */
     // 1. customize ACF path
     add_filter('acf/settings/path', 'my_acf_settings_path');
+
     function my_acf_settings_path($path)
     {
         $path = get_template_directory() . '/inc/plugins/acf/';
