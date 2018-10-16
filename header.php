@@ -17,7 +17,7 @@
 <link rel="profile" href="http://gmpg.org/xfn/11">
     <!-- customizer styles -->
     <style>
-        section#hp-hero{background: url("<?php echo get_theme_mod('hero_image', get_template_directory_uri() . '/assets/img/Austin.jpg') ;?>") no-repeat 50% 50% scroll; background-size:cover;}
+        section#hp-hero{background: url("<?php echo get_theme_mod('hero_image', get_template_directory_uri() . '/assets/img/Austin.jpg') ;?>") no-repeat 50% 0 fixed; background-size:cover;}
 
     </style>
 <?php wp_head(); ?>

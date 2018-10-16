@@ -7,13 +7,13 @@
  */
 
 ?>
-<section class="hero" id="hp-hero">
+<section class="hero" id="hp-hero" data-type="background" data-speed="10">
     <div class="container">
         <div class="row">
-<!--            <div class="col-sm-12-site-title-wrapper text-center">-->
-<!--                <h1>--><?php //echo esc_html( get_theme_mod('hero_heading') );?><!--</h1>-->
-<!--                <p class="lead" id="hp-hero-description">--><?php //echo esc_html( get_theme_mod('hero_text') );?><!--</p>-->
-<!--            </div>-->
+            <div class="col-sm-12 text-center">
+
+            </div>
         </div>
     </div>
+    <?php get_template_part('template-parts/globals/content','bouncing-arrow');?>
 </section>

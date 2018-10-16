@@ -28,7 +28,7 @@ get_template_part('template-parts/globals/content', 'footer-widgets');
     </footer><!-- #colophon -->
 </section>
 </div><!-- #page -->
-
+<?php get_template_part('template-parts/globals/content','scrollup');?>
 <?php wp_footer(); ?>
 
 </body>
