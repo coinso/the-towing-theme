@@ -6,7 +6,8 @@
  * Time: 9:24 AM
  */
 
-$cps_local_phone = get_field('cps_local_phone');
+$company_phone = get_field('company_phone', 'option');
+$cps_local_phone = get_field('cps_local_phone') ? get_field('cps_local_phone') : $company_phone;
 
 ?>
 <nav class="navbar navbar-default navbar-fixed-top">
@@ -19,22 +20,24 @@ $cps_local_phone = get_field('cps_local_phone');
                 </span>
             </button>
             <?php if( wp_is_mobile() ){ ?>
-                <a href="tel:<?php echo $cps_local_phone ? $cps_local_phone : get_theme_mod('schema_phone_number') ;?>" class="navbar-text">
-                    <p><i class="fa fa-phone fa-x2"></i>&nbsp;<?php  echo $cps_local_phone ? $cps_local_phone :  get_theme_mod('schema_phone_number') ;?></p>
+                <a href="tel:<?php echo $cps_local_phone ;?>" class="navbar-text">
+                    <p><i class="fa fa-phone fa-x2"></i>&nbsp;<?php  echo $cps_local_phone ;?></p>
                 </a>
             <?php } ;?>
             <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>">
-                <?php if( wp_is_mobile() ){ ?>
-                    <img src="<?php echo get_theme_mod('mobile_logo', get_template_directory_uri() . '/assets/img/logo.png') ;?>" alt="<?php bloginfo( 'name' ); ?>" id="logo"/>
-                <?php } else { ?>
-                    <img src="<?php echo get_theme_mod('schema_logo', get_template_directory_uri() . '/assets/img/logo.png') ;?>" alt="<?php bloginfo( 'name' ); ?>" id="logo"/>
+                <?php if( wp_is_mobile() ){
+                    $logo = get_field('site_logo_small', 'option');?>
+                    <img src="<?php echo $logo['url'] ;?>" alt="<?php echo $logo['alt']; ?>" id="logo"/>
+                <?php } else {
+                    $logo = get_field('site_logo_big', 'option');?>
+                    <img src="<?php echo $logo['url'] ;?>" alt="<?php echo $logo['alt']; ?>" id="logo"/>
                 <?php };?>
             </a>
         </div>
         <div class="collapse navbar-collapse">
             <?php if( !wp_is_mobile()):?>
-            <a href="tel:<?php  echo $cps_local_phone ? $cps_local_phone :   get_theme_mod('schema_phone_number') ;?>" class="navbar-text">
-                <p><i class="fa fa-phone fa-x2"></i>&nbsp;<?php  echo $cps_local_phone ? $cps_local_phone :  get_theme_mod('schema_phone_number') ;?></p>
+            <a href="tel:<?php  echo $cps_local_phone ;?>" class="navbar-text">
+                <p><i class="fa fa-phone fa-x2"></i>&nbsp;<?php  echo $cps_local_phone ;?></p>
             </a>
             <?php endif;?>
             <?php

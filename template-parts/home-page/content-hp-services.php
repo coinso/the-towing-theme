@@ -19,8 +19,14 @@ if( $services ):
                 <div class="service-card panel panel-default">
                     <a href="<?php echo esc_url( get_permalink( $service->ID ) ); ?>">
                         <div class="overlay"></div>
-                        <?php $photo = get_field('service_image', $service->ID);?>
-                        <img data-src="<?php echo $photo['url']; ?>" src="" alt="<?php echo $photo['alt']; ?>" class="service-card__img"/>
+                        <?php if ( has_post_thumbnail( $service->ID) ){
+                            $photo = get_the_post_thumbnail_url( $service->ID ); ?>
+                                <img data-src="<?php echo $photo; ?>" src="" alt="<?php echo $service_name; ?>" class="service-card__img"/>
+                        <?php } else {
+                             $photo = get_field('service_image', $service->ID); ?>
+                                <img data-src="<?php echo $photo['url']; ?>" src="" alt="<?php echo $photo['alt']; ?>" class="service-card__img"/>
+                        <?php } ?>
+
                         <h3 class="card-title">
                             <?php echo esc_html( $service_name ); ?>
                             <br>
