@@ -13,19 +13,8 @@
  * @param string $more "Read more" excerpt string.
  * @return string (Maybe) modified "read more" excerpt string.
  */
-function coinso_excerpt_more( $more ) {
-	if( !get_post_type() == 'post'){
-		$more = sprintf( '<br><a class="read-more btn btn-readmore btn-tax btn-warning" href="%1$s" role="link">%2$s</a>',
-			get_permalink( get_the_ID() ),
-			__( 'more info >>', KS_TEXTDOMAIN )
-		);
-	}else{
-		$more = sprintf( '<br><a class="read-more" href="%1$s" role="link">%2$s</a>',
-			get_permalink( get_the_ID() ),
-			__( 'המשך לקרוא >>', KS_TEXTDOMAIN )
-		);
-	}
-	return $more;
+function coinso_excerpt_more( $more ){
+    return '<a href="' . get_the_permalink() . '" rel="nofollow"> Read More...</a>';
 }
 add_filter( 'excerpt_more', 'coinso_excerpt_more' );
 
