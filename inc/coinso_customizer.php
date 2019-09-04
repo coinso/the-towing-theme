@@ -20,9 +20,11 @@ function coiso_customize_register($wp_customize){
         'priority' => 10
     )));
 
+
     /**
     * Benefits Panel
     **/
+
     $wp_customize->add_section('benefits', array(
         'title'  => __('Main Benefits', 'coinso_towing_theme' ),
         'description' => sprintf(__('Main benefits bar', 'coinso_towing_theme')),

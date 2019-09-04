@@ -53,7 +53,7 @@ if( is_single() ){ ?>
             </header><!-- .entry-header -->
 
             <div class="entry-content">
-                <a href="<?php the_permalink();?>" class="btn btn-success">
+                <a href="<?php the_permalink();?>" class="btn btn-warning">
                     Learn More...
                 </a>
             </div><!-- .entry-content -->

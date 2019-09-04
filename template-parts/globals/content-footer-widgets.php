@@ -12,10 +12,12 @@ if( !is_page_template('page-city.php')){
     <div class="container">
         <div class="row">
             <div class="col-md-3" id="footer-widget-1">
+
                 <?php if(is_active_sidebar('footer-1')){
                     dynamic_sidebar('footer-1');
                 }
-                ?>            </div>
+                ?>
+            </div>
             <div class="col-md-3" id="footer-widget-2">
                 <?php if(is_active_sidebar('footer-2')){
                     dynamic_sidebar('footer-2');

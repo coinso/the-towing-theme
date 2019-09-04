@@ -308,8 +308,28 @@ function add_all_post_types(){
 add_action('after_setup_theme', 'add_all_post_types', 0);
 
 
+
 require_once ( get_template_directory() . '/inc/TGM_Plugin_Activation.php');
 require_once ( get_template_directory() . '/inc/theme-plugins.php');
 require_once ( get_template_directory() . '/inc/addons.php');
 require_once ( get_template_directory() . '/inc/create_pages.php');
 require_once ( get_template_directory() . '/inc/coinso_customizer.php');
+
+function wpdocs_excerpt_more( $more ) {
+    return '<a href="'.get_the_permalink().'" rel="nofollow"> Read More...</a>';
+}
+add_filter( 'excerpt_more', 'wpdocs_excerpt_more' );
+
+
+
+/**
+ * Filter the except length to 20 words.
+ *
+ * @param int $length Excerpt length.
+ * @return int (Maybe) modified excerpt length.
+ */
+function wpdocs_custom_excerpt_length( $length ) {
+    return 35;
+}
+add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
+

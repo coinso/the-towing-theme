@@ -488,11 +488,6 @@
     "location": [
         [
             {
-                "param": "page",
-                "operator": "==",
-                "value": "4"
-            },
-            {
                 "param": "page_template",
                 "operator": "==",
                 "value": "page-home.php"
