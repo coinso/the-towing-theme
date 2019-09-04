@@ -635,7 +635,8 @@ div.wpcf7-validation-errors{
     padding: .2em; }
 
 .scrollup:hover {
-    text-decoration: none; }
+    text-decoration: none;
+}
 
 @media screen and (max-width: 640px) {
     .scrollup {

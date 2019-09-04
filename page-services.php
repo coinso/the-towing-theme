@@ -62,6 +62,7 @@ if ( have_posts() ){
                 <?php } ?>
             </main><!-- #main -->
         </div><!-- #primary -->
+
     <?php }
 }
 

@@ -103,7 +103,7 @@
             return false;
         });
     }//scroll_up
-    scroll_up()
+    scroll_up();
     function img_lazyload(){
         var imgDefer = document.getElementsByTagName('img');
         for ( var i=0; i < imgDefer.length; i++) {
