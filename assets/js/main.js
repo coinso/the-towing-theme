@@ -55,5 +55,91 @@
         prevArrow: '<button type="button" class="fa fa-angle-right fa-2x"></button>',
         nextArrow: '<button type="button" class="fa fa-angle-left fa-2x"></button>'
     });
+
+    var $window = $(window);
+
+    //Parallax background effect
+    $('section[data-type="background"]').each(function () {
+        var $bgobj = $(this); //assaining the object
+        jQuery($window).scroll(function () {
+            // scroll the background at var speed
+            //the yPos is a negative value because we're scrolling it UP!
+            var yPos = -($window.scrollTop() / $bgobj.data('speed'));
+            // put together our final background position
+            var coords = '50% ' + yPos + 'px';
+
+            //Move the background
+            $bgobj.css({
+                backgroundPosition: coords
+            });
+        }); //ebd window scroll
+    });
+    /**
+     * scrollup
+     *
+     */
+
+    function scroll_up() {
+        $(window).scroll(function(){
+            function scrollUpInit(){
+                if( $('.scrollup').hasClass('active')){
+
+                    $('.scrollup').removeClass('active');
+                };
+            }
+            if ($(this).scrollTop() > 450) {
+                setTimeout( scrollUpInit, 1000 );
+
+                $('.scrollup').fadeIn();
+
+            } else {
+                $('.scrollup').fadeOut();
+            }
+
+        });
+        $('.scrollup').click(function(){
+            $(this).toggleClass('active');
+            $("html, body").animate({ scrollTop: 0 }, 1000);
+            return false;
+        });
+    }//scroll_up
+    scroll_up()
+    function img_lazyload(){
+        var imgDefer = document.getElementsByTagName('img');
+        for ( var i=0; i < imgDefer.length; i++) {
+            if( imgDefer[i].getAttribute( 'data-src' ) ) {
+                imgDefer[i].setAttribute( 'src', imgDefer[i].getAttribute( 'data-src' ));
+            }
+        }
+    }
+    window.onload = img_lazyload();
+
+    /**
+     * hero_scroll_down
+     *
+     */
+    function hero_scroll_down(){
+        var arrow = $('.hero .arrow i');
+        var scroll = $(window).scrollTop();
+        if (!arrow) return;
+        $(arrow).click(function () {
+            $('html, body').animate({
+                scrollTop: $(this).parent().offset().top - 100
+            }, 1000);
+        });
+        //scrolldown fade effect on home page
+
+        $(window).scroll( function(){
+            if ( $(this).scrollTop() >= 1) {
+                $(arrow).addClass('fade');
+            } else{
+                $(arrow).removeClass('fade');
+            }
+            console.log(scroll);
+        });
+
+    }// hero_scroll_down
+
+    hero_scroll_down();
 })(jQuery);
 
