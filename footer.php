@@ -21,9 +21,12 @@ get_template_part('template-parts/globals/content', 'footer-widgets');
 <section id="site-footer">
     <footer id="colophon" class="site-footer container" role="contentinfo">
         <div class="site-info row">
-            <a href="<?php echo esc_url( __( 'https://wordpress.org/', 'the-towing-theme' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'the-towing-theme' ), 'WordPress' ); ?></a>
-            <span class="sep"> | </span>
-            <?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'the-towing-theme' ), 'the-towing-theme', '<a href="https://automattic.com/" rel="designer">Ido at coinso.com</a>' ); ?>
+            <div class="col-sm-12 text-center">
+                <a href="<?php echo esc_url( __( get_home_url('/'), 'the-towing-theme' ) ); ?>" rel="nofollow"><?php printf( esc_html__( 'All Right Reserved &copy; %s', 'the-towing-theme' ), get_bloginfo('name') ); ?></a>
+                <span class="sep"> | </span>
+                <?php printf( esc_html__( '%s', 'the-towing-theme' ), date('Y') ); ?>
+
+            </div>
         </div><!-- .site-info -->
     </footer><!-- #colophon -->
 </section>

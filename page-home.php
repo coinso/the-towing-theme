@@ -15,7 +15,7 @@
  */
 
 get_header();
-    if(get_field('show_about_section')){
+    if ( get_field('show_about_section') ){
 
         get_template_part('template-parts/home-page/content','hp-about');
     }

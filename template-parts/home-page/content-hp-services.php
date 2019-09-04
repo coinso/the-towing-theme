@@ -10,14 +10,19 @@ if( $services ):
                 <h3 class="section-title"><?php the_field('hp_services_title');?></h3>
             </div>
         </div>
-        <hr class="divider">
+        <?php if ( !wp_is_mobile() ){
+            echo '<hr class="divider">';
+        }?>
         <div class="row">
             <?php foreach( $services as $service ):
                 ?>
                 <div class="service-card panel panel-default col-md-3 col-sm-6 col-xs-6">
                     <a href="<?php echo get_permalink( $service->ID ); ?>">
-                        <?php $photo = get_field('service_image', $service->ID);?>
-                        <img src="<?php echo $photo['url']; ?>" alt="" />
+                        <?php $photo = get_field('service_image', $service->ID);
+                        if ( has_post_thumbnail( $service->ID ) ) {
+                            echo get_the_post_thumbnail( $service->ID, 'medium', array('class' => 'hp-service-img') );
+                        }?>
+<!--                        <img src="--><?php //echo $photo['url']; ?><!--" alt="" />-->
                         <div class="overlay"></div>
 
                         <h3 class="card-title">

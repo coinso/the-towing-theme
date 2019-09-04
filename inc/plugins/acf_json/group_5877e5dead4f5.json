@@ -39,12 +39,13 @@
             "default_value": "",
             "tabs": "all",
             "toolbar": "full",
-            "media_upload": 1
+            "media_upload": 1,
+            "delay": 0
         },
         {
             "key": "field_5877e5ec57cca",
             "label": "Hero section",
-            "name": "hero_section",
+            "name": "",
             "type": "tab",
             "instructions": "",
             "required": 0,
@@ -387,7 +388,7 @@
             "elements": [
                 "featured_image"
             ],
-            "min": 4,
+            "min": "",
             "max": 4,
             "return_format": "object"
         },
@@ -421,7 +422,10 @@
                 "id": ""
             },
             "message": "",
-            "default_value": 1
+            "default_value": 1,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
         },
         {
             "key": "field_58c8dfb3cc8c2",
@@ -437,7 +441,10 @@
                 "id": ""
             },
             "message": "",
-            "default_value": 1
+            "default_value": 1,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
         },
         {
             "key": "field_58c8dfd4cc8c3",
@@ -453,7 +460,10 @@
                 "id": ""
             },
             "message": "",
-            "default_value": 1
+            "default_value": 1,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
         },
         {
             "key": "field_58c8dfebcc8c4",
@@ -469,16 +479,14 @@
                 "id": ""
             },
             "message": "",
-            "default_value": 1
+            "default_value": 1,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
         }
     ],
     "location": [
         [
-            {
-                "param": "page",
-                "operator": "==",
-                "value": "4"
-            },
             {
                 "param": "page_template",
                 "operator": "==",
@@ -505,5 +513,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1489559554
+    "modified": 1537864101
 }

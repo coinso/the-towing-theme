@@ -12,7 +12,10 @@ if( !is_page_template('page-city.php')){
     <div class="container">
         <div class="row">
             <div class="col-md-3" id="footer-widget-1">
-                <?php echo do_shortcode('[localbusiness]'); ?>
+                <?php if(is_active_sidebar('sidebar-1')){
+                    dynamic_sidebar( 'sidebar-1');
+                }
+                ?>
             </div>
             <div class="col-md-3" id="footer-widget-2">
                 <?php if(is_active_sidebar('footer-2')){
